@@ -1,0 +1,242 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5FC3D749
+P 3850 4650
+F 0 "J1" H 3850 4450 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 3930 4551 50  0001 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3850 4650 50  0001 C CNN
+F 3 "~" H 3850 4650 50  0001 C CNN
+	1    3850 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FC40741
+P 5950 4200
+F 0 "R2" H 5880 4154 50  0000 R CNN
+F 1 "10K" H 5880 4245 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5880 4200 50  0001 C CNN
+F 3 "~" H 5950 4200 50  0001 C CNN
+	1    5950 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FC4109A
+P 6950 4200
+F 0 "R1" H 6880 4154 50  0000 R CNN
+F 1 "10K" H 6880 4245 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6880 4200 50  0001 C CNN
+F 3 "~" H 6950 4200 50  0001 C CNN
+	1    6950 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 4050 4400 4050
+$Comp
+L Device:C_Small C1
+U 1 1 5FC4314D
+P 5550 4200
+F 0 "C1" H 5642 4246 50  0000 L CNN
+F 1 "100nF" H 5642 4155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5550 4200 50  0001 C CNN
+F 3 "~" H 5550 4200 50  0001 C CNN
+	1    5550 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117-3.3 U1
+U 1 1 5FC3EA69
+P 4700 4050
+F 0 "U1" H 4700 4292 50  0000 C CNN
+F 1 "AMS1117-3.3" H 4700 4201 50  0000 C CNN
+F 2 "Custom_Parts:AMS1117" H 4700 4250 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 4800 3800 50  0001 C CNN
+	1    4700 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4050 5100 4050
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FCDFBB7
+P 4150 4550
+F 0 "#FLG0101" H 4150 4625 50  0001 C CNN
+F 1 "PWR_FLAG" V 4150 4850 50  0000 C CNN
+F 2 "" H 4150 4550 50  0001 C CNN
+F 3 "~" H 4150 4550 50  0001 C CNN
+	1    4150 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FCE1FD8
+P 4150 4650
+F 0 "#FLG0102" H 4150 4725 50  0001 C CNN
+F 1 "PWR_FLAG" V 4150 4950 50  0000 C CNN
+F 2 "" H 4150 4650 50  0001 C CNN
+F 3 "~" H 4150 4650 50  0001 C CNN
+	1    4150 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 5FCE6F16
+P 5100 4200
+F 0 "C3" H 5218 4246 50  0000 L CNN
+F 1 "100uF" H 5218 4155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D6.3mm_H11.0mm_P2.50mm" H 5138 4050 50  0001 C CNN
+F 3 "~" H 5100 4200 50  0001 C CNN
+	1    5100 4200
+	1    0    0    -1  
+$EndComp
+Connection ~ 5100 4050
+Wire Wire Line
+	5100 4050 5550 4050
+Wire Wire Line
+	5550 4050 5550 4100
+Connection ~ 5550 4050
+Wire Wire Line
+	5550 4300 5550 4350
+Wire Wire Line
+	5550 4350 5100 4350
+Connection ~ 5100 4350
+Wire Wire Line
+	5100 4350 4700 4350
+$Comp
+L Custom_Symbols:ESP01 U2
+U 1 1 5FD2F991
+P 6350 4150
+F 0 "U2" V 6396 3872 50  0000 R CNN
+F 1 "ESP01" V 6305 3872 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 6500 4150 50  0001 C CNN
+F 3 "" H 6500 4150 50  0001 C CNN
+	1    6350 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 4050 5950 4050
+Wire Wire Line
+	6250 3750 6250 3850
+Connection ~ 6250 3750
+Wire Wire Line
+	6250 3750 6450 3750
+Wire Wire Line
+	6450 3750 6450 3850
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5FC43EC4
+P 7850 4550
+F 0 "J2" H 7822 4528 50  0000 R CNN
+F 1 "Conn_01x03_Male" V 8003 4694 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 7850 4550 50  0001 C CNN
+F 3 "~" H 7850 4550 50  0001 C CNN
+	1    7850 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 4050 5950 3750
+Wire Wire Line
+	5950 3750 6250 3750
+Wire Wire Line
+	6350 4450 6350 4550
+Wire Wire Line
+	6350 4550 5950 4550
+Wire Wire Line
+	5950 4550 5950 4350
+Wire Wire Line
+	6450 4450 6450 4550
+Wire Wire Line
+	6450 4550 6950 4550
+Wire Wire Line
+	6450 3750 6950 3750
+Wire Wire Line
+	6950 3750 6950 4050
+Connection ~ 6450 3750
+Wire Wire Line
+	6950 4350 6950 4550
+Connection ~ 6950 4550
+Wire Wire Line
+	6950 4550 7650 4550
+Wire Wire Line
+	6550 4450 6550 4650
+Connection ~ 6550 4650
+$Comp
+L Device:CP C2
+U 1 1 5FC41AFE
+P 7400 4200
+F 0 "C2" V 7145 4200 50  0000 C CNN
+F 1 "1000uF" V 7236 4200 50  0000 C CNN
+F 2 "Capacitor_THT:C_Radial_D10.0mm_H20.0mm_P5.00mm" H 7438 4050 50  0001 C CNN
+F 3 "~" H 7400 4200 50  0001 C CNN
+	1    7400 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 4650 7250 4650
+Wire Wire Line
+	4250 3650 7150 3650
+Wire Wire Line
+	7550 3650 7550 4200
+Wire Wire Line
+	7550 4450 7650 4450
+Connection ~ 7550 4200
+Wire Wire Line
+	7250 4200 7250 4650
+Connection ~ 7250 4650
+Wire Wire Line
+	7250 4650 7650 4650
+Connection ~ 4250 4050
+Connection ~ 5950 4050
+Wire Wire Line
+	4250 3650 4250 4050
+Wire Wire Line
+	7550 4200 7550 4450
+Wire Wire Line
+	4250 4050 4250 4550
+Wire Wire Line
+	4050 4650 4150 4650
+Connection ~ 4150 4650
+Wire Wire Line
+	4150 4650 4700 4650
+Wire Wire Line
+	4050 4550 4150 4550
+Connection ~ 4150 4550
+Wire Wire Line
+	4150 4550 4250 4550
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5FD5CD70
+P 7350 3650
+F 0 "SW1" H 7200 3750 50  0000 L CNN
+F 1 "SW_SPST" H 7350 3794 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7350 3650 50  0001 C CNN
+F 3 "~" H 7350 3650 50  0001 C CNN
+	1    7350 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4350 4700 4650
+Connection ~ 4700 4350
+Connection ~ 4700 4650
+Wire Wire Line
+	4700 4650 6550 4650
+NoConn ~ 6550 3850
+NoConn ~ 6350 3850
+NoConn ~ 6250 4450
+$EndSCHEMATC
